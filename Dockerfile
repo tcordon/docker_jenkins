@@ -43,6 +43,9 @@ RUN jenkins-plugin-cli -f /usr/share/jenkins/ref/plugins.txt
 #Enable acces for jnlp Agents
 ADD ref /usr/share/jenkins/
 
+#Create OWASP NVD database path
+RUN mkdir -p /home/jenkins/security/owasp-nvd/ && chown jenkins.jenkins -R /home/jenkins
+
 #########################################
 ### Jenkins Configuration And Plugins ###
 #########################################
