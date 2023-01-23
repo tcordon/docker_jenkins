@@ -46,6 +46,9 @@ ADD ref /usr/share/jenkins/
 #Create OWASP NVD database path
 RUN mkdir -p /home/jenkins/security/owasp-nvd/ && chown jenkins.jenkins -R /home/jenkins
 
+#Add Jenkins to Docker group
+RUN usermod -aG docker jenkins
+
 #########################################
 ### Jenkins Configuration And Plugins ###
 #########################################
