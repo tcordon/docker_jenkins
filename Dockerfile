@@ -48,8 +48,6 @@ RUN mkdir -p /home/jenkins/security/owasp-nvd/ && chown jenkins.jenkins -R /home
 
 #Add Jenkins to Docker group and "daemon" for Mac
 RUN usermod -aG docker,daemon jenkins
-#Ensure Docker Socket has right group permissions
-RUN chmod g+rw /var/run/docker.sock
 
 #########################################
 ### Jenkins Configuration And Plugins ###
